@@ -45,8 +45,8 @@ class MuninPlugin(object):
         sys.exit(1)
 
     def run(self):
-        cmd =  ((len(sys.argv) > 1) and sys.argv[1] or None) or "execute"
-        if cmd == "execute":
+        cmd =  ((len(sys.argv) > 1) and sys.argv[1] or None) or "fetch"
+        if cmd == "fetch":
             values = self.execute()
             if values:
                 for k, v in values.items():
